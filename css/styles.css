@@ -2,6 +2,10 @@
   display: none;
 }
 
+.container {
+  min-width: 475px;
+}
+
 .card {
   cursor: pointer;
   color: tomato;
@@ -9,4 +13,17 @@
 
 .card:hover {
   text-decoration: underline;
+}
+
+form img {
+  width: 80px;
+  height: 130px;
+  display: inline-block;
+  border: 2px solid tomato;
+  margin: 2px;
+}
+
+#img-area {
+  margin: 0 auto;
+  text-align: center;
 }

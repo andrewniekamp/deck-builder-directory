@@ -14,6 +14,14 @@
         <div class="col-md-6">
           <h2>Add a card:</h2>
           <form id="new-card">
+            <label>Card Image</label>
+            <div id="img-area" class="form-group container">
+              <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTaINFasx7vmV9gkF1_FUozozQ3lQmsgAWecMIFi97CpTbt58Nr" class="portrait" id="">
+              <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRyji4CIyxGXMwi2PC7X9rbRBkmGJ0YbrGc-RAg6IqtISRQoRHadA" class="portrait" id="">
+              <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcT4sXUjKXQkRzivabWnl2jCOcfbzM-Ob7hjq40Vo1Kn3FmyD66e" class="portrait" id="">
+              <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQBrK5vwvXmIC7gNVnzwCSHotN2WxN3jS4cS-fMngnqlUmV3w2M" class="portrait" id="">
+              <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRgEsffmw9lZaKDz97vlLGsSNLUaU-DfQE7nTzcsDdX4LiMugSU" class="portrait" id="">
+            </div>
             <div class="form-group">
               <label for="new-card-name">Card Name</label>
               <input type="text" class="form-control" id="new-card-name">
@@ -21,6 +29,14 @@
             <div class="form-group">
               <label for="new-card-type">Card Type</label>
               <input type="text" class="form-control" id="new-card-type">
+            </div>
+            <div class="form-group">
+              <label for="new-card-terrain">Card Terrain</label>
+              <input type="text" class="form-control" id="new-card-terrain">
+            </div>
+            <div class="form-group">
+              <label for="new-card-weakness">Card Weakness</label>
+              <input type="text" class="form-control" id="new-card-weakness">
             </div>
 
             <button type="submit" class="btn">Add</button>
@@ -33,10 +49,11 @@
         </div>
         <div class="col-md-6">
           <div id="show-card">
-            <h2></h2>
-
+            <h2>Current Card</h2>
             <p>Card Name: <span class="card-name"></span></p>
             <p>Card Type: <span class="card-type"></span></p>
+            <p>Card Type: <span class="card-terrain"></span></p>
+            <p>Card Type: <span class="card-weakness"></span></p>
           </div>
         </div>
       </div>
