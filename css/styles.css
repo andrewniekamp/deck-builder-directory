@@ -1,0 +1,12 @@
+#show-card {
+  display: none;
+}
+
+.card {
+  cursor: pointer;
+  color: tomato;
+}
+
+.card:hover {
+  text-decoration: underline;
+}
