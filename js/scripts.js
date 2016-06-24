@@ -1,9 +1,10 @@
 //business logic
-function Card(cardName, cardType, cardTerrain, cardWeakness) {
+function Card(cardName, cardType, cardTerrain, cardWeakness, imageLink) {
   this.name = cardName;
   this.type = cardType;
   this.terrain = cardTerrain;
   this.weakness = cardWeakness;
+  this.image = imageLink;
 }
 
 Card.prototype.nameAndClass = function() {
@@ -14,7 +15,7 @@ Card.prototype.nameAndClass = function() {
 $(function(){
   var portraitLink = '';
   $(".portrait").click(function() {
-    $("img").addClass("unselected");
+    $("form img").addClass("unselected");
     $(this).removeClass("unselected");
     portraitLink = $(this).attr("src");
     console.log(portraitLink);
@@ -26,8 +27,9 @@ $(function(){
     var cardTypeInput = $("#new-card-type").val();
     var cardTerrainInput = $("#new-card-terrain").val();
     var cardWeaknessInput = $("#new-card-weakness").val();
+    var imageLinkInput = portraitLink;
 
-    var newCard = new Card(cardNameInput, cardTypeInput, cardTerrainInput, cardWeaknessInput);
+    var newCard = new Card(cardNameInput, cardTypeInput, cardTerrainInput, cardWeaknessInput, imageLinkInput);
 
     $("#deck").append("<li><span class='card'>" + newCard.nameAndClass() + "</span></li>");
 
@@ -39,7 +41,7 @@ $(function(){
     $(".card").last().click(function() {
       $("#show-card").show();
       $("#show-card h2").text(newCard.name);
-      $("#deck-img-area").html("<img src='" + portraitLink + "'>");
+      $("#deck-img-area").html("<img src='" + newCard.image + "'>");
       $(".card-name").text(newCard.name);
       $(".card-type").text(newCard.type);
       $(".card-terrain").text(newCard.terrain);
