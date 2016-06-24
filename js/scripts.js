@@ -12,6 +12,14 @@ Card.prototype.nameAndClass = function() {
 
 //user interface logic
 $(function(){
+  var portraitLink = '';
+  $(".portrait").click(function() {
+    $("img").addClass("unselected");
+    $(this).removeClass("unselected");
+    portraitLink = $(this).attr("src");
+    console.log(portraitLink);
+  })
+
   $("form#new-card").submit(function(event) {
     event.preventDefault();
     var cardNameInput = $("#new-card-name").val();
@@ -31,6 +39,7 @@ $(function(){
     $(".card").last().click(function() {
       $("#show-card").show();
       $("#show-card h2").text(newCard.name);
+      $("#deck-img-area").html("<img src='" + portraitLink + "'>");
       $(".card-name").text(newCard.name);
       $(".card-type").text(newCard.type);
       $(".card-terrain").text(newCard.terrain);
