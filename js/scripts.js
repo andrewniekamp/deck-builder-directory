@@ -1,4 +1,4 @@
-function Card(charName, charClass) {
-  this.name = charName;
-  this.class = charClass;
+function Card(cardName, cardClass) {
+  this.name = cardName;
+  this.class = cardClass;
 }
