@@ -21,6 +21,22 @@ $(function(){
     console.log(portraitLink);
   })
 
+  $("#sample").click(function() {
+    var newCard = new Card("Spider Queen", "Rogue", "Cave", "Fire", "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcT4sXUjKXQkRzivabWnl2jCOcfbzM-Ob7hjq40Vo1Kn3FmyD66e");
+    $("#deck").append("<li><span class='card'>" + newCard.nameAndClass() + "</span></li>");
+    $(".card").last().click(function() {
+      $("#show-card").show();
+      $("#show-card h2").text(newCard.name);
+      $("#deck-img-area").html("<img src='" + newCard.image + "'>");
+      $(".card-name").text(newCard.name);
+      $(".card-type").text(newCard.type);
+      $(".card-terrain").text(newCard.terrain);
+      $(".card-weakness").text(newCard.weakness);
+    });
+  });
+
+
+
   $("form#new-card").submit(function(event) {
     event.preventDefault();
     var cardNameInput = $("#new-card-name").val();
@@ -48,4 +64,5 @@ $(function(){
       $(".card-weakness").text(newCard.weakness);
     })
   })
+
 })
