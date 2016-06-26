@@ -26,7 +26,7 @@ $(function(){
       $("#show-card").show();
       $("#show-card h2").text(card.name);
       $("#deck-img-area").html("<img src='" + card.image + "'>");
-      $(".card-name").text(card.name);
+      // $(".card-name").text(card.name);
       $(".card-type").text(card.type);
       $(".card-terrain").text(card.terrain);
       $(".card-weakness").text(card.weakness);
@@ -41,8 +41,6 @@ $(function(){
       showCard(newCard);
     });
   });
-
-
 
   $("form#new-card").submit(function(event) {
     event.preventDefault();
@@ -67,5 +65,4 @@ $(function(){
       showCard(newCard);
     })
   })
-
 })
