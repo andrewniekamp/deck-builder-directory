@@ -1,6 +1,6 @@
-# Fantasy Deck Builder
+# Deck Builder Directory
 
-##### Created at Epicodus with pair programming
+##### By: Andrew Niekamp
 
 ## Description
 
